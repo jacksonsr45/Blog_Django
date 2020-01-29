@@ -1,10 +1,14 @@
 from django.shortcuts import render
 
-def index(request):
-    return render(request, 'index.html', {})
+from blog.models import Post
 
-def post(request):
-    return render(request, 'post.html', {})
+def index(request):
+    posts = Post.objects.all()
+    return render(request, 'index.html', {'posts': posts})
+
+def post(request, post_id):
+    post = Post.objects.get(pk=post_id)
+    return render(request, 'post.html', {'post': post})
 
 def about(request):
     return render(request, 'about.html', {})

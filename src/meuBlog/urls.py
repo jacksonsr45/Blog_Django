@@ -13,7 +13,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('post/', post),
+    path('posts/<int:post_id>', post),
     path('about/', about),
     path('contact/', contact),
 ]

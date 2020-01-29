@@ -7,7 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     summary = RichTextField()
     content = RichTextUploadingField()
-    authon = models.ForeignKey(User, on_delete= models.PROTECT)
+    author = models.ForeignKey(User, on_delete= models.PROTECT)
     created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
