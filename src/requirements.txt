@@ -11,7 +11,7 @@ chardet==3.0.4
 Click==7.0
 colorama==0.4.3
 cx-Freeze==6.1
-Django==3.0.2
+Django==3.0.3
 django-ckeditor==5.8.0
 django-js-asset==1.2.2
 docutils==0.16
